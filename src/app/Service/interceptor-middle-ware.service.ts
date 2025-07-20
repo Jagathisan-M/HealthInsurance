@@ -8,7 +8,7 @@ import {ConfigurationService}  from "../Config/configuration.service"
 })
 export class InterceptorMiddleWareService implements HttpInterceptor {
 
-  BaseUrl : string = "https://localhost:7062/";
+  BaseUrl : string = "https://localhost:7225/";
 
   constructor(private config : ConfigurationService) { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
