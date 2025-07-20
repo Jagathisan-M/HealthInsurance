@@ -8,17 +8,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { InterceptorMiddleWareService } from './Service/interceptor-middle-ware.service';
+import { HomeComponent } from './home/home.component';
 
-const routes : Routes = [
+const routes: Routes = [
   {
-    path:"UserLogin", component : UserLoginComponent
+    path: "userLogin", component: UserLoginComponent
+  },
+  {
+    path: "home", component: HomeComponent
+  },
+  {
+    path: "", component: UserLoginComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
