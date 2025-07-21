@@ -3,16 +3,20 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserLoginComponent } from './user-login/user-login.component';
+import { UserLoginComponent } from './Component/user-login/user-login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { InterceptorMiddleWareService } from './Service/interceptor-middle-ware.service';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './Component/home/home.component';
+import { SignUpComponent } from './Component/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
     path: "userLogin", component: UserLoginComponent
+  },
+  {
+    path: "signUp", component: SignUpComponent
   },
   {
     path: "home", component: HomeComponent
@@ -26,12 +30,14 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     UserLoginComponent,
-    HomeComponent
+    HomeComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],

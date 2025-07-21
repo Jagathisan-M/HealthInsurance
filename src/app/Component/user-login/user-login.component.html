@@ -1,13 +1,7 @@
-<p>user-login works!</p>
 <form #userDetail="ngForm">
     <div class="container">
-        <table class="table table-bordered" style="border:1px solid">
+        <table class="table table-bordered" style="border:1px lavender">
             <tbody>
-                <tr class="row" style="height: 100px;">
-                    <td class="col col-12 text-center" style="background-color: azure;">
-                        <h1>Health Insurance</h1>
-                    </td>
-                </tr>
                 <tr class="row">
                     <td class="col-3"></td>
                     <td class="col-2">
@@ -33,12 +27,12 @@
                     <td class="col-2">
                     </td>
                     <td class="col-2">
-                        <button class="btn btn-primary form-control" (click)="login()">
+                        <button class="btn btn-info form-control" (click)="login()">
                             Login
                         </button>
                     </td>
                     <td class="col-2">
-                        <button class="btn btn-primary form-control" (click)="signup()">
+                        <button class="btn btn-info form-control" (click)="signup()">
                             Sign Up
                         </button>
                     </td>
@@ -48,7 +42,7 @@
                     <td class="col-3"></td>
                     <td class="col-2">
                     </td>
-                    <td class="col-4">
+                    <td class="col-4" style="align-items: center;">
                         <label>{{message}}</label>
                     </td>
                     <td class="col-3"></td>

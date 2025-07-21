@@ -3,6 +3,7 @@ export class UserDetail {
     isIssuer: boolean = false;
     userName: string = "";
     password: string = "";
+    confirmPassword: string = "";
     email: string = "";
     address: string = "";
     phoneNumber: number = 0;
