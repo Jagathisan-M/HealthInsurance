@@ -1,1 +1,63 @@
-<router-outlet></router-outlet>
+<table class="table table-bordered" style="border:1px lightblue">
+    <tbody>
+        <tr class="row" style="height: 100px;">
+            <td class="col col-12 text-center" style="background-color: azure;">
+                <h1>Health Insurance</h1>
+            </td>
+        </tr>
+        <tr class="row" style="box-shadow: 0 4px 4px gray; margin:15px; border-radius: 5px;" >
+            <td class="col-1"></td>
+            <td class="col-8">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" routerLink="/Profile"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false">Profile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                            aria-selected="false">Contact</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" routerLink="/Gadgets"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false">Gadgets</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
+                            data-bs-target="#disabled-tab-pane" type="button" role="tab"
+                            aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+                    </li>
+                </ul>
+            </td>
+            <td class="col-1">
+                <button type="button" class="btn btn-default form-control" routerLink="/userLogin">Login</button>
+            </td>
+            <td class="col-1">
+                <button type="button" class="btn btn-default form-control" routerLink="/signUp">Sign Up</button>
+            </td>
+            <td class="col-1">
+            </td>
+        </tr>
+        <tr class="row" style="padding-left: 15px;">
+            <td class="col-1" style="  background-color: #dddddd;">
+                <ul style="list-style-type: none;  margin: 0;  padding: 0; height: 100%;">
+                    <li *ngFor="let menu of configService.MenuList;" style="  display: block;  width: 200px;">
+                        <a [routerLink] = "menu.path">
+                            {{menu.menuName}}
+                        </a>
+                    </li>
+                </ul>
+            </td>
+            <td class="col-11">
+                <router-outlet></router-outlet>
+            </td>
+        </tr>
+    </tbody>
+</table>

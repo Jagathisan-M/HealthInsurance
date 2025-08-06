@@ -1,0 +1,132 @@
+<form [formGroup]="signUpDetail">
+    <div class="container">
+        <table class="table">
+            <tbody>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="userName" class="form-label">
+                            User Name
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        <div [ngClass]="{'has-error' : signUpDetail.get('userName')?.invalid && (signUpDetail.get('userName')?.touched || TriggerValidation)}">
+                            <input type="text" formControlName="userName" class="form-control form-control-sm" />
+                        </div>
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="password" class="form-label">
+                            Password
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        <div [ngClass]="{'has-error' : signUpDetail.get('password')?.invalid && (signUpDetail.get('password')?.touched || TriggerValidation)}">
+                            <input type="text" formControlName="password" class="form-control form-control-sm" />
+                        </div>
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="confirmPassword" class="form-label">
+                            Confirm Password
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        <div [ngClass]="{'has-error' : signUpDetail.get('confirmPassword')?.invalid && (signUpDetail.get('confirmPassword')?.touched || TriggerValidation)}">
+                            <input type="text" formControlName="confirmPassword" class="form-control form-control-sm" />
+                        </div>
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="email" class="form-label">
+                            Email
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        <div [ngClass]="{'has-error' : signUpDetail.get('email')?.invalid && (signUpDetail.get('email')?.touched || TriggerValidation)}">
+                            <input type="email" formControlName="email" class="form-control form-control-sm" />
+                        </div>
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="address" class="form-label">
+                            Address
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        <input type="text" multiple="true" formControlName="address" class="form-control form-control-sm" />
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="phoneNumber" class="form-label">
+                            Phone Number
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        <div [ngClass]="{'has-error' : signUpDetail.get('phoneNumber')?.invalid && (signUpDetail.get('phoneNumber')?.touched || TriggerValidation)}">
+                        <input type="text" formControlName="phoneNumber" class="form-control form-control-sm" />
+                        </div>
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="isIssuer" class="form-label">
+                            Is Issuer
+                        </label>
+                    </td>
+                    <td class="col-4">
+                        Yes <input type="radio" formControlName="isIssuer" value="True" />
+                        No <input type="radio" formControlName="isIssuer" value="False" />
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                        <label for="isSmoker" class="form-label">
+                            Is Smoker
+                        </label>
+                    </td>
+                    <td class="col-4">
+                         Yes <input type="radio" formControlName="isSmoker" value="True" />
+                        No <input type="radio" formControlName="isSmoker" value="False" />
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-3"></td>
+                    <td class="col-2">
+                    </td>
+                    <td class="col-2">
+                        <button class="btn btn-info form-control form-control-sm" (click)="CreateUser()" [disabled]="signUpDetail.invalid">
+                            Create
+                        </button>
+                    </td>
+                    <td class="col-2">
+                        <button class="btn btn-info form-control form-control-sm" (click)="ClearControl()">
+                            Clear
+                        </button>
+                    </td>
+                    <td class="col-3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

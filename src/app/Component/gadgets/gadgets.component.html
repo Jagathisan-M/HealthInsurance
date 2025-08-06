@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <div class="bd-example" style="border: 1px double gray;">
+            <div *ngFor="let item of _gadgets; let i = index; let e = even; let o = odd">
+                <div class="row" *ngIf="i%2==0">
+                    <div class="col-1"></div>
+                    <div class="col-5" style="
+                            background-color: aquamarine;
+                            border: 1px solid red;
+                            margin: 15px;
+                            padding-left: 15px;
+                            cursor: pointer;"
+                            (click)="GadgetDetail(_gadgets[i].gadgetId)"
+                            >
+                        <div class="row" style="text-align: center;">
+                            <h2>{{_gadgets[i].gadgetName + ' ' + _gadgets[i].itemName}}</h2>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <h5>$ {{_gadgets[i].price}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-5" *ngIf="_gadgets[i+1]" style="
+                            background-color: aquamarine;
+                            border: 1px solid red;
+                            margin: 15px;
+                            padding-left: 15px;
+                            cursor: pointer;"
+                            (click)="GadgetDetail(_gadgets[i+1].gadgetId)"
+                            >
+                        <div class="row" style="text-align: center;">
+                            <h2>{{_gadgets[i+1].gadgetName + ' ' + _gadgets[i+1].itemName}}</h2>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <h5>$ {{_gadgets[i+1].price}}</h5>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-3" style="border: 1px solid rgb(235, 197, 62); height: 25px;">
+
+        </div>
+        <div class="col-6" style="border: 1px solid rgb(235, 197, 62); height: 25px">
+            <input type="text" class="form-control form-control-lg" placeholder="form-control form-control-lg"
+                style="border: 1px solid black; margin-bottom: 5px;" />
+            <input type="text" class="form-control form-control-sm" placeholder="form-control form-control-sm"
+                style="border: 1px solid black; margin-bottom: 5px;" />
+            <input type="text" class="form-control" placeholder="form-control"
+                style="border: 1px solid black; margin-bottom: 5px;" />
+        </div>
+        <div class="col-3" style="border: 1px solid rgb(235, 197, 62); height: 25px">
+
+        </div>
+    </div>

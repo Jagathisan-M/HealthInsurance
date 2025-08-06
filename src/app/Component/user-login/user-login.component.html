@@ -1,0 +1,69 @@
+<form #userDetail="ngForm">
+    <div style="margin: 15px;">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6"
+                style=" padding-top: 15px; margin-right: -100px; border-radius: 20px; box-shadow:0 4px 20px gray ;">
+                <table class="table" style="border:1px lavender">
+                    <tbody>
+                        <tr class="row">
+                            <td class="col-3"></td>
+                            <td class="col-2">
+                            </td>
+                            <td class="col-4" style="align-items: center;">
+                            </td>
+                            <td class="col-3"></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-3"></td>
+                            <td class="col-2">
+                                <label for="userName" class="form-label">User Name</label>
+                            </td>
+                            <td class="col-4">
+                                <input type="text" id="userName" name="userName" [(ngModel)]="userName"
+                                    class="form-control" />
+                            </td>
+                            <td class="col-3"></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-3"></td>
+                            <td class="col-2">
+                                <label for="password" class="form-label">Password</label>
+                            </td>
+                            <td class="col-4">
+                                <input type="text" id="password" name="password" [(ngModel)]="password"
+                                    class="form-control" />
+                            </td>
+                            <td class="col-3"></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-3"></td>
+                            <td class="col-2">
+                            </td>
+                            <td class="col-2">
+                                <button class="btn btn-info form-control" (click)="login()">
+                                    Login
+                                </button>
+                            </td>
+                            <td class="col-2">
+                                <button class="btn btn-info form-control" (click)="signup()">
+                                    Sign Up
+                                </button>
+                            </td>
+                            <td class="col-3"></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-3"></td>
+                            <td class="col-2">
+                            </td>
+                            <td class="col-4" style="align-items: center;">
+                                <label>{{message}}</label>
+                            </td>
+                            <td class="col-3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>

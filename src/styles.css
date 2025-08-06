@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.container{
+    background-color: burlywood;
+    border: 1px seagreen;
+}
+
+.btn {
+    border: 0.5px gray;
+}
+
+.has-error input {
+    border: 2px solid red;
+}

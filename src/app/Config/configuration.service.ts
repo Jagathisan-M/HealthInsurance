@@ -8,4 +8,6 @@ export class ConfigurationService {
   constructor() { }
 
   userToken : string = "";
+
+   MenuList: any = []
 }
